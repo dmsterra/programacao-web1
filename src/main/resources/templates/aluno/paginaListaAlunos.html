@@ -27,8 +27,8 @@
     							<td th:text="${aluno.nome}"></td>
     							<td>
     								<div class="btn-group pull-right">
-    									<a class="btn btn-sm btn-primary">ALTERAR</a>
-    									<a class="delete btn btn-sm btn-danger">EXCLUIR</a>
+    									<a class="btn btn-sm btn-primary" th:href="@{/aluno/alterar/{idAluno}(idAluno=${aluno.id})}">ALTERAR</a>
+    									<a class="delete btn btn-sm btn-danger" th:href="@{/aluno/excluir/{idAluno}(idAluno=${aluno.id})}">EXCLUIR</a>
     								</div>
     							</td>
     						</tr>
@@ -37,7 +37,7 @@
     			</div>
     		</div>
     	</div>
-    	<a class="btn btn-sm btn-success">CADASTRAR NOVO DOCUMENTO</a>
+    	<a class="btn btn-sm btn-success" th:href="@{/aluno/cadastrar}">CADASTRAR NOVO ALUNO</a>
     </div>
   </body>
 </html>
