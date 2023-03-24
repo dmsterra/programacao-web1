@@ -58,11 +58,4 @@ public class AlunoController {
 		alunoService.excluir(id);
 		return listaTodosAlunos();
 	}
-	
-
-	
-	
-	
-	
-
 }
