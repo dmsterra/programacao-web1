@@ -22,6 +22,15 @@
 							<label>NOME</label>
 							<input type="text" class="form-control input-sm" th:field="*{nome}" autofocus="auto-focus" placeholder="Informe o nome" maxlength="50"/>
 						</div>
+						
+						<div class="form-group row">
+							<label>TURMA</label>
+							<select class="form-control" th:field="*{turma}" >
+								<option value=0>Selecione a turma</option>
+								<option th:each="turma:${turmas}" th:value="${turma.id}" th:text="${turma.nome}"></option>
+							</select>	
+						</div>
+						
 					</fieldset>
 				</div>
 				<div align="center">

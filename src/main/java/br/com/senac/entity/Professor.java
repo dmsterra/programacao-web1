@@ -12,8 +12,10 @@ public class Professor {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
+		
 	
-	
+//	private Curso curso;
+//	
 	public Integer getId() {
 		return id;
 	}

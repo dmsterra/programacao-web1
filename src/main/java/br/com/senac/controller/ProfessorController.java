@@ -21,7 +21,7 @@ public class ProfessorController {
 	
 	@GetMapping("/listarProfessores")
 	public ModelAndView listaTodosProfessores() {
-		ModelAndView mv = new ModelAndView("professor/paginaListaProfessores");
+		ModelAndView mv = new ModelAndView("professor/paginaListaProfessor");
 		mv.addObject("professores", professorService.buscarTodosProfessores());
 		return mv;
 	}

@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Curso {
@@ -12,6 +14,10 @@ public class Curso {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
+	
+	@OneToOne
+	@JoinColumn(name = "id_professor")
+	private Professor professor;
 	
 	public Integer getId() {
 		return id;
@@ -24,5 +30,11 @@ public class Curso {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	public Professor getProfessor() {
+		return professor;
+	}
+	public void setProfessor(Professor professor) {
+		this.professor = professor;
 	}
 }
